@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Tutorial Belajar JavaScript</title>
+<script>
+function tampilkan(){
+  var nilairange =document.getElementById("form1").kategori.value;
+  if (nilairange=="1")
+    {
+        document.getElementById("forkompetensi").value = 'Kurang';
+   
+    }
+  else if (nilairange == "2")
+    {
+       document.getElementById("forkompetensi").value = 'Baik'; 
+    }
+    else if (nilairange == "3")
+    {
+       document.getElementById("forkompetensi").value = 'Sangat Baik'; 
+    }
+}
+</script>
+</head>
+<body>
+<h2>Suckittrees.com</h2>
+<form id="form1" name="form1" onsubmit="return false">
+  <label>Pilih Kategori: </label>
+  <select id="kompetensi" name="kategori" onchange="tampilkan()">
+    <option value='0' disabled="disabled" selected/>Pilih</option>
+    <option value="1">Kurang</option>
+    <option value="2">Baik</option>
+    <option value="3">Sangat baik</option>
+  </select>
+  <br/><br/>
+   <label>Nama : </label> <input type='text' id="forkompetensi" name="nama"><br/><br/>
+ 
+</form>
+
+</body>
+</html>
